@@ -1,0 +1,10 @@
+1:alacritty
+2:/usr/bin/discord
+3:htop
+4:kitty
+5:/usr/lib/thunderbird/thunderbird
+6:/usr/bin/code
+7:thunar
+8:/opt/zen-browser-bin/zen-bin
+9:/usr/lib/thunderbird/thunderbird
+10:filezilla

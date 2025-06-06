@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Boot Setup
+Exec=/usr/bin/boot-setup
+Icon=system-run
+Type=Application
+Terminal=false
+Categories=Utility;
