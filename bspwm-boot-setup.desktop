@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=BSPWM Boot Setup Autostart
+Comment=Starts applications on specific BSPWM workspaces based on user config
+Exec=/usr/bin/bspwm-boot-setup-autostart
+NoDisplay=true
+Terminal=false
+X-GNOME-Autostart-enabled=true

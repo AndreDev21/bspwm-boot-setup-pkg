@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Usa o mesmo caminho padronizado para o arquivo de configuração
+CONFIG_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/bspwm-boot-setup/config.txt"
+
+# Se o arquivo não existe, não faz nada e termina silenciosamente.
+if [ ! -f "$CONFIG_FILE" ]; then
+  exit 0
+fi
+
+# Lê o arquivo linha por linha, separando por ':'
+while IFS=: read -r ws app; do
+  # Pula linhas vazias ou malformadas
+  [ -z "$ws" ] || [ -z "$app" ] && continue
+
+  # Foca no workspace desejado
+  bspc desktop -f "$ws"
+  # Executa o aplicativo em background
+  bash -c "$app &"
+  # Um pequeno 'sleep' ajuda o bspwm a processar a abertura de cada janela
+  sleep 1
+done < "$CONFIG_FILE"
